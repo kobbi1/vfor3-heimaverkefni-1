@@ -7,17 +7,26 @@
 </head>
 <body>
 
-	<div id="app"></div>
+	<div id="app">
+		
+		<input v-model="inputInformation">
+		<a href="http://www.google.com/search?q=" v-bind:href="input"></a>
+
+	</div>
 
 
 <script src="https://unpkg.com/vue"></script>
 <script type="text/javascript">
+
+
+
 	var app = new Vue({
 		el: "#app",
 		data: {
-			
+			inputInformation: input,
 		}
 	})
+
 
 
 </script>
