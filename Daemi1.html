@@ -5,12 +5,18 @@
 
 	<title></title>
 </head>
+
+<style type="text/css">
+
+
+</style>
 <body>
 
 	<div id="app">
 		
-		<input v-model="inputInformation">
-		<a href="http://www.google.com/search?q=" v-bind:href="input"></a>
+		<input id="input" v-model="inputInformation">
+		<br>
+		<a v-bind:href="'http://www.google.com/search?q=' + inputInformation" v-text="inputInformation" id="theLink"></a>
 
 	</div>
 
@@ -18,12 +24,19 @@
 <script src="https://unpkg.com/vue"></script>
 <script type="text/javascript">
 
+	var theInput = document.getElementById('input')
 
+	theInput.style="border-bottom: 2px solid #D3D3D3"
+	theInput.focus="border-bottom: 2px solid #FF0000"
+
+	theLink = document.getElementById("theLink");
+	theLink.style="color:black";
 
 	var app = new Vue({
 		el: "#app",
 		data: {
-			inputInformation: input,
+			inputInformation: "",
+			check: 0
 		}
 	})
 
