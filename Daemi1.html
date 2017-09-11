@@ -32,7 +32,7 @@
 		
 		<input id="theInput" v-model="inputInformation">
 		<br>
-		<a v-bind:href="'http://www.google.com/search?q=' + inputInformation" v-text="'Smelltu hér til að leita'" id="theLink" v-bind:class="[isActive,inactive]"></a>
+		<a v-bind:href="'http://www.google.com/search?q=' + inputInformation" v-text="'Smelltu hér til að leita'" id="theLink" v-bind:style="{color:(inputInformation ? 'red':'black')}"></a>
 
 	</div>
 
@@ -47,8 +47,7 @@
 		el: "#app",
 		data: {
 			inputInformation: "",
-			isActive:"#FF6347",
-			inactive: "black" ,
+
 		}
 	})
 

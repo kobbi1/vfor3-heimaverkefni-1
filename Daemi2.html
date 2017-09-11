@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title></title>
+
+	<style type="text/css">
+		#button {
+			background-color: #1E90FF;
+			padding:3px;
+			color:white;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="app">
+		
+	<form action="http://www.google.com/search" method="get">
+		<input type="text" v-model="inputInformation">
+
+		<input type="hidden" name="q"  v-model="inputInformation">
+
+		<input type="submit" value="Smelltu Hér" id="button">
+	</form>
+
+	</div>
+
+
+<script src="https://unpkg.com/vue"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el: "#app",
+		data: {
+			inputInformation: "",
+		}
+	})
+
+</script>
+</body>
+</html>
